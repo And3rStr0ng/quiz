@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz de Carros</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Quiz de Carros</h1>
+
+    <section id="intro">
+      <p class="sub">Responda 10 preguntas básicas sobre carros. Cada pregunta tiene 4 opciones y 1 minuto para responder. Acierto suma 1 punto; si se acaba el tiempo, resta 1.</p>
+      <button type="button" id="start" class="primary">Comenzar</button>
+    </section>
+
+    <section id="quiz" hidden>
+      <div class="status">
+        <span id="progress">Pregunta 1 de 10</span>
+        <span id="score">Puntaje: 0</span>
+        <span id="timer" role="timer">Tiempo: 60s</span>
+      </div>
+      <h2 id="question"></h2>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button type="button" id="next" class="primary" hidden>Siguiente</button>
+    </section>
+
+    <section id="results" hidden>
+      <h2 id="finalScore"></h2>
+      <p class="sub">Repaso de sus respuestas:</p>
+      <ol id="review" class="review"></ol>
+      <button type="button" id="restart" class="primary">Intentar de nuevo</button>
+    </section>
+  </main>
+  <script src="js/scrip.js"></script>
+</body>
+</html>
